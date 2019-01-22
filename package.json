@@ -1,0 +1,28 @@
+{
+  "name": "what-the-hail",
+  "version": "1.0.0",
+  "description": "The *ultimate* user's choice weather app!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracehartzell/what-the-hail.git"
+  },
+  "author": "Grace Hartzell, Bryan Anderson, Mitali Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gracehartzell/what-the-hail/issues"
+  },
+  "homepage": "https://github.com/gracehartzell/what-the-hail#readme",
+  "dependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.1"
+  }
+}
