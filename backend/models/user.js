@@ -1,8 +1,8 @@
 const environment = process.env.NODE_ENV || "development";
 const configuration = require("../../knexfile")[environment];
-const database = require("knex")(configuration); //eslint-disable-line
-const bcrypt = require("bcrypt"); //eslint-disable-line
-const crypto = require("crypto"); //eslint-disable-line
+const database = require("knex")(configuration);
+const bcrypt = require("bcrypt");
+const crypto = require("crypto");
 
 const signup = (req, res) => {
   const user = req.body;
@@ -18,7 +18,7 @@ const signup = (req, res) => {
       delete user.password_digest;
       res.status(201).json({ user });
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(err)); //eslint-disable-line
 };
 
 const hashPassword = password => {
@@ -46,4 +46,20 @@ const createToken = () => {
   });
 };
 
-module.exports = { signup };
+const authenticate = userReq => {
+  findByToken(userReq.token).then(user => {
+    if (user.username === userReq.username) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+};
+
+const findByToken = token => {
+  return database
+    .raw("SELECT * FROM users WHERE token = ?", [token])
+    .then(data => data.rows[0]);
+};
+
+module.exports = { signup, authenticate };

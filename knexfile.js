@@ -3,10 +3,10 @@ module.exports = {
     client: "pg",
     connection: "postgres://localhost/what-the-hail",
     migrations: {
-      directory: "./db/migrations"
+      directory: "./backend/db/migrations"
     },
     seeds: {
-      directory: "./db/seeds/dev"
+      directory: "./backend/db/seeds/dev"
     },
     useNullAsDefault: true
   },
@@ -19,18 +19,6 @@ module.exports = {
     },
     seeds: {
       directory: "./db/seeds/test"
-    },
-    useNullAsDefault: true
-  },
-
-  production: {
-    client: "pg",
-    connection: process.env.DATABASE_URL,
-    migrations: {
-      directory: "./db/migrations"
-    },
-    seeds: {
-      directory: "./db/seeds/production"
     },
     useNullAsDefault: true
   }
