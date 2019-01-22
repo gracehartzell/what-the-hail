@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.disable("x-powered-by");
 
-app.post("/index", User.signup);
+app.post("/signup", User.signup);
+app.post("/signin", User.signin);
 
 app.listen(PORT, () => {
   console.log(`Welcome to the safest port, ${PORT}, in the storm.`); // eslint-disable-line

@@ -46,6 +46,53 @@ const createToken = () => {
   });
 };
 
+const signin = (req, res) => {
+  const userReq = req.body;
+  let user;
+
+  findUser(userReq)
+    .then(foundUser => {
+      user = foundUser;
+      return checkPassword(userReq.password, foundUser);
+    })
+    .then((res) => createToken()) //eslint-disable-line
+    .then(token => updateUserToken(token, user))
+    .then(() => {
+      delete user.password_digest;
+      res.status(200).json(user);
+    })
+    .catch(err => console.error(err)); //eslint-disable-line
+};
+
+const findUser = userReq => {
+  return database
+    .raw("SELECT * FROM users WHERE username = ?", [userReq.username])
+    .then(data => data.rows[0]);
+};
+
+const checkPassword = (reqPassword, foundUser) => {
+  return new Promise((resolve, reject) =>
+    bcrypt.compare(reqPassword, foundUser.password_digest, (err, res) => {
+      if (err) {
+        reject(err);
+      } else if (res) {
+        resolve(res);
+      } else {
+        reject(new Error("Passwords do not match!"));
+      }
+    })
+  );
+};
+
+const updateUserToken = (token, user) => {
+  return database
+    .raw(
+      "UPDATE users SET token = ? WHERE id = ? RETURNING id, username, token",
+      [token, user.id]
+    )
+    .then(data => data.rows[0]);
+};
+
 const authenticate = userReq => {
   findByToken(userReq.token).then(user => {
     if (user.username === userReq.username) {
@@ -62,4 +109,4 @@ const findByToken = token => {
     .then(data => data.rows[0]);
 };
 
-module.exports = { signup, authenticate };
+module.exports = { signup, signin, authenticate };
