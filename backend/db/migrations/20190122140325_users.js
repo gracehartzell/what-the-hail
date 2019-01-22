@@ -1,10 +1,10 @@
 exports.up = (knex) => {
   return knex.schema.createTable("users", (table) => {
     table.increments();
-    table.string("name");
+    table.string("username");
     table.string("token");
     table.string("password_digest");
-    table.timestamps();
+    table.timestamps("created_at");
   });
 };
 
