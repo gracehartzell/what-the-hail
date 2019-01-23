@@ -16,4 +16,15 @@ selenium-debug.log
 *.njsproj
 *.sln
 
+# Logs 
+logs
+*.log
+npm-debug.log*
+
+# Cordova
+plugins/
+
+# Custom WebPack Dist.
+www/dist/
+
 
