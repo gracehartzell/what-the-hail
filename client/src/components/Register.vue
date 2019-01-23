@@ -1,24 +1,16 @@
 <template>
-<div>
-        <h4>Register</h4>
-        <form>
-            <label for="username" >Username</label>
-            <div>
-                <input id="username" type="username" v-model="username" required>
-            </div>
-
-            <label for="password">Password</label>
-            <div>
-                <input id="password" type="password" v-model="password" required>
-            </div>
-            <div>
-                <button type="submit" @click="handleSubmit">
-                    Register
-                </button>
-            </div>
-        </form>
-    </div>
+	<div>
+		<h4>Register</h4>
+			<form>
+				<label for="username" >Username</label>
+					<input id="username" type="username" v-model="username" required>
+				<label for="password">Password</label>
+					<input id="password" type="password" v-model="password" required>
+				<button type="submit" @click="handleSubmit">Register</button>
+		</form>
+	</div>
 </template>
+
 <script>
 export default {
   props: ["nextUrl"],
