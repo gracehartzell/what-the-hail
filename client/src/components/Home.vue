@@ -3,6 +3,7 @@
     <Navbar />
     <Login />
     <Register />
+    <Weather />
   </div> 
 </template>
 
@@ -10,12 +11,14 @@
 import Navbar from "@/components/Navbar";
 import Login from "@/components/Login";
 import Register from "@/components/Register";
+import Weather from '@/components/Weather';
 export default {
   name: "Home",
   components: {
     Navbar,
     Login,
-    Register
+    Register,
+    Weather
   }
 };
 </script>
