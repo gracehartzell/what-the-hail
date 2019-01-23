@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Navbar from '@/components/Navbar'
+import Login from '@/components/Login'
+
+Vue.component('Navbar', Navbar)
+Vue.component('Login', Login)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  render: h => h(App)
+}).$mount('#app')

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/hailLOGO.svg.png">
     <router-view/>
   </div>
 </template>
@@ -17,14 +16,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  border: 1px solid red;
-  width: 100vw;
-  height: 75px;
-  display: flex;
-}
-
-img {
-  height: 75px;
-  margin-right: 20px;
 }
 </style>
