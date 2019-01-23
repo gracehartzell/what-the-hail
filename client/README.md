@@ -1,6 +1,6 @@
-# what-the-hail
+# client
 
-> A Vue.js project
+> Client-side for What the Hail? weather app
 
 ## Build Setup
 
