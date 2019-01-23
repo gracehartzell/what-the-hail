@@ -23,39 +23,24 @@ export default {
   methods: {
     handleSubmit(e) {
       e.preventDefault();
+      const user = {
+        username: this.username,
+        password: this.password
+      };
 
-      if (
-        this.password === this.password_confirmation &&
-        this.password.length > 0
-      ) {
-        let url = "http://localhost:3000/register";
-        if (this.is_admin != null || this.is_admin == 1)
-          url = "http://localhost:3000/signup";
-        this.$http
-          .post(url, {
-            username: this.username,
-            password: this.password
-          })
-          .then(response => {
-            localStorage.setItem("user", JSON.stringify(response.data.user));
-            localStorage.setItem("jwt", response.data.token);
+      const options = {
+        method: "post",
+        headers: {
+          Accept: "applications/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+      };
 
-            if (localStorage.getItem("jwt") != null) {
-              this.$emit("loggedIn");
-              if (this.$route.params.nextUrl != null) {
-                this.$router.push(this.$route.params.nextUrl);
-              } else {
-                this.$router.push("/");
-              }
-            }
-          })
-          .catch(error => {
-            console.error(error);
-          });
-      } else {
-        this.password = "";
-        return alert("Passwords do not match");
-      }
+      const request = new Request("http://localhost:3000/signup", options);
+
+      fetch(request);
+      alert("You are done");
     }
   }
 };

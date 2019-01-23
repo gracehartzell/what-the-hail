@@ -22,39 +22,25 @@ export default {
   methods: {
     handleSubmit(e) {
       e.preventDefault();
-      if (this.password.length > 0) {
-        this.$http
-          .post("http://localhost:3000/signin", {
-            username: this.username,
-            password: this.password
-          })
-          .then(response => {
-            let is_admin = response.data.user.is_admin;
-            localStorage.setItem(
-              "username",
-              JSON.stringify(response.data.user)
-            );
-            localStorage.setItem("password_digest", response.data.token);
+      const user = {
+        username: this.username,
+        password: this.password
+      };
 
-            if (localStorage.getItem("password_digest") != null) {
-              this.$emit("loggedIn");
-              if (this.$route.params.nextUrl != null) {
-                this.$router.push(this.$route.params.nextUrl);
-              } else {
-                if (is_admin == 1) {
-                  this.$router.push("admin");
-                } else {
-                  this.$router.push("dashboard");
-                }
-              }
-            }
-          })
-          .catch(function(error) {
-            console.error(error.response);
-          });
-      }
+      const options = {
+        method: "post",
+        headers: {
+          Accept: "applications/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+      };
+
+      const request = new Request("http://localhost:3000/signin", options);
+
+      fetch(request);
+      alert("You are signin");
     }
   }
 };
 </script>
-
