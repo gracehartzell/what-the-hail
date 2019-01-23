@@ -2,7 +2,7 @@
   "name": "client",
   "version": "1.0.0",
   "description": "Client-side for What the Hail? weather app",
-  "author": "Grace Hartzell <gracehartzell@utexas.edu>",
+  "author": "Grace Hartzell <gracehartzell@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
