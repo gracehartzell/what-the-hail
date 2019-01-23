@@ -1,0 +1,4 @@
+#Tue Jan 22 16:07:23 CST 2019
+base.0=/Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
