@@ -8,7 +8,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.f1lt3r.whatthehail"
+      "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
   "dependent_plugins": {},

@@ -1,8 +1,8 @@
 {
-  "name": "what-the-hail",
+  "name": "client",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Mitali Mittal <mits254@gmail.com>",
+  "description": "Client-side for What the Hail? weather app",
+  "author": "Grace Hartzell <gracehartzell@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,8 +14,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "cordova-android": "^7.1.4",
-    "cordova-ios": "^4.5.5",
+    "cordova-android": "6.4.0",
+    "cordova-ios": "4.5.5",
     "cordova-plugin-whitelist": "^1.3.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
@@ -73,9 +73,9 @@
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
-    "webpack": ">=3.1.11",
+    "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "3.1.11",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
