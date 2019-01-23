@@ -1,5 +1,5 @@
 <template>
-    <div>
+<div>
         <h4>Register</h4>
         <form>
             <label for="username" >Username</label>
@@ -20,48 +20,51 @@
     </div>
 </template>
 <script>
-    export default {
-        props : ["nextUrl"],
-        data(){
-            return {
-                username : "",
-                password : "",
-            }
-        },
-        methods : {
-            handleSubmit(e) {
-                e.preventDefault()
+export default {
+  props: ["nextUrl"],
+  data() {
+    return {
+      username: "",
+      password: ""
+    };
+  },
+  methods: {
+    handleSubmit(e) {
+      e.preventDefault();
 
-                if (this.password === this.password_confirmation && this.password.length > 0)
-                {
-                    let url = "http://localhost:3000/register"
-                    if(this.is_admin != null || this.is_admin == 1) url = "http://localhost:3000/singup"
-                    this.$http.post(url, {
-                        username: this.username,
-                        password: this.password
-                    })
-                    .then(response => {
-                        localStorage.setItem('user',JSON.stringify(response.data.user))
-                        localStorage.setItem('jwt',response.data.token)
+      if (
+        this.password === this.password_confirmation &&
+        this.password.length > 0
+      ) {
+        let url = "http://localhost:3000/register";
+        if (this.is_admin != null || this.is_admin == 1)
+          url = "http://localhost:3000/signup";
+        this.$http
+          .post(url, {
+            username: this.username,
+            password: this.password
+          })
+          .then(response => {
+            localStorage.setItem("user", JSON.stringify(response.data.user));
+            localStorage.setItem("jwt", response.data.token);
 
-                        if (localStorage.getItem('jwt') != null){
-                            this.$emit('loggedIn')
-                            if(this.$route.params.nextUrl != null){
-                                this.$router.push(this.$route.params.nextUrl)
-                            }
-                            else{
-                                this.$router.push('/')
-                            }
-                        }
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    });
-                } else {
-                    this.password = ""
-                    return alert("Passwords do not match")
-                }
+            if (localStorage.getItem("jwt") != null) {
+              this.$emit("loggedIn");
+              if (this.$route.params.nextUrl != null) {
+                this.$router.push(this.$route.params.nextUrl);
+              } else {
+                this.$router.push("/");
+              }
             }
-        }
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      } else {
+        this.password = "";
+        return alert("Passwords do not match");
+      }
     }
+  }
+};
 </script>

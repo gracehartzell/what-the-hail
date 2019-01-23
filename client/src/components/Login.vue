@@ -1,23 +1,13 @@
 <template>
   <div>
-      <h4>Login</h4>
-      <form>
-          <label for="username" >UserName</label>
-          <div>
-              <input id="username" type="username" v-model="username" required autofocus>
-          </div>
-          <div>
-              <label for="password" >Password</label>
-              <div>
-                  <input id="password" type="password" v-model="password" required>
-              </div>
-          </div>
-          <div>
-              <button type="submit" @click="handleSubmit">
-                  Login
-              </button>
-          </div>
-      </form>
+    <h4>Login</h4>
+    <form>
+      <label for="username" >Username</label>
+        <input id="username" type="username" v-model="username" required autofocus>
+      <label for="password" >Password</label>
+        <input id="password" type="password" v-model="password" required>
+      <button type="submit" @click="handleSubmit">Login</button>
+    </form>
   </div>
 </template>
 
@@ -67,3 +57,4 @@ export default {
   }
 };
 </script>
+
