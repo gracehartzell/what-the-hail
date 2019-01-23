@@ -1,5 +1,5 @@
 <template>
-  <h1>What the Hail?</h1>
+      <h1>What the Hail?</h1>
 </template>
 
 <script>
