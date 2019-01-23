@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/hailLOGO.svg.png" style="height: 200px">
     <router-view/>
   </div>
 </template>
