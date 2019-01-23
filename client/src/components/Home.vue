@@ -1,14 +1,20 @@
+
 <template>
-      <h1>What the Hail?</h1>
+     <div id='app'>
+       <h1>What the hail??</h1>
+       <Login></Login>
+       <Register></Register>
+     </div> 
 </template>
 
 <script>
+import Login from '@/components/Login';
+import Register from '@/components/Register';
 export default {
   name: "Home",
-  data() {
-    return {
-      msg: "What the Hail?"
-    };
+  components: {
+    Login,
+    Register
   }
 };
 </script>
