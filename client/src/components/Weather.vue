@@ -3,6 +3,11 @@
     <input id="city" type="text" placeholder="City" v-model="city" required>
     <input id="state" type="text" placeholder="State" v-model="state" required>
     <button type="submit" @click="handleSubmit">Submit</button>
+
+  <div>
+    <h2>{{this.temp}} {{this.unit}}</h2>
+    <h3>{{this.text}}</h3>
+    </div>
   </div>
 </template>
 
@@ -12,7 +17,11 @@ export default {
   data() {
     return {
       city: "",
-      state: ""
+      state: "",
+      temp:"",
+      unit:"",
+      background:"",
+      text:""
     };
   },
   methods: {
@@ -40,12 +49,24 @@ export default {
           return res.json();
         })
         .then(res => {
-          // res[0].Key
-          f
+          
+          let key = res[0].Key;
+          console.log(key)
+          const request2 = new Request(
+            `https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=3G82zFHhr6JnoMvvrcfscDsmO6bSzlWg`,options);
+          fetch(request2)
+          .then(res => {return res.json()})
+          .then(res => {
+            this.temp = res[0].Temperature.Imperial.Value;
+            this.unit = res[0].Temperature.Imperial.Unit;
+            this.text = res[0].WeatherText;
+          })
+          
         });
     }
   }
 };
+
 </script>
 
 <style scoped>
