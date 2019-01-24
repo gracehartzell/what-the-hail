@@ -11,10 +11,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 #header {
   border: 1px solid red;
-  width: 100%;
+  /* width: 100%; */
   height: 75px;
   display: flex;
 }

@@ -1,12 +1,11 @@
 <template>
   <div id="location-search">
-    <h4>Location?</h4>
     <input id="city" type="text" placeholder="City" v-model="city" required>
     <input id="state" type="text" placeholder="State" v-model="state" required>
     <button type="submit" @click="handleSubmit">Submit</button>
-    <h4>{{res[0].LocalizedName}}</h4>
   </div>
 </template>
+
 <script>
 export default {
   props: ["nextUrl"],
@@ -51,7 +50,5 @@ export default {
 <style scoped>
 #location-search {
   border: 2px solid limegreen;
-  width: 50%;
-  float: right;
 }
 </style>
