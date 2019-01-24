@@ -40,7 +40,8 @@ export default {
           return res.json();
         })
         .then(res => {
-          console.log(res[0].LocalizedName);
+          // res[0].Key
+          f
         });
     }
   }
@@ -49,6 +50,12 @@ export default {
 
 <style scoped>
 #location-search {
-  border: 2px solid limegreen;
+  display: flex;
+  align-items: baseline;
+  vertical-align: top;
 }
+#location-search input {
+  width: 20%;
+}
+
 </style>
