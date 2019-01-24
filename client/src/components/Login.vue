@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div id="login">
     <h4>Login</h4>
     <form>
       <label for="username" >Username</label>
         <input id="username" type="username" v-model="username" required autofocus>
+
       <label for="password" >Password</label>
         <input id="password" type="password" v-model="password" required>
       <button type="submit" @click="handleSubmit">Login</button>
@@ -44,3 +45,31 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#login {
+  border: 1px solid salmon;
+  margin: auto;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login label,
+#login input {
+  display: flex;
+}
+
+#login label {
+  margin-top: 17px;
+}
+
+#login input {
+  line-height: 1.2rem;
+}
+
+button {
+margin: 15px 0;
+float: right;
+}
+</style>
