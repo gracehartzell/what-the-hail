@@ -55,7 +55,7 @@ const signin = (req, res) => {
       user = foundUser;
       return checkPassword(userReq.password, foundUser);
     })
-    .then((res) => createToken()) //eslint-disable-line
+    .then(res => createToken()) //eslint-disable-line
     .then(token => updateUserToken(token, user))
     .then(() => {
       delete user.password_digest;
