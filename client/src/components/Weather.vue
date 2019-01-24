@@ -1,9 +1,11 @@
 <template>
-    <div>
-        <input id="city" type="text" v-model="city" required>
-        <input id="state" type="text" v-model="state" required>
-        <button type="submit" @click="handleSubmit">Submit</button>
-    </div>
+  <div id="location-search">
+    <h4>Location?</h4>
+    <input id="city" type="text" placeholder="City" v-model="city" required>
+    <input id="state" type="text" placeholder="State" v-model="state" required>
+    <button type="submit" @click="handleSubmit">Submit</button>
+    <h4>{{res[0].LocalizedName}}</h4>
+  </div>
 </template>
 
 <script>
@@ -40,9 +42,17 @@ export default {
           return res.json();
         })
         .then(res => {
-          console.log(res[0].Key);
+          console.log(res[0].LocalizedName);
         });
     }
   }
 };
 </script>
+
+<style scoped>
+#location-search {
+  border: 2px solid limegreen;
+  width: 50%;
+  float: right;
+}
+</style>

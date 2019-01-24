@@ -17,7 +17,6 @@ export default {
   width: 100%;
   height: 75px;
   display: flex;
-  position: absolute;
 }
 
 h1 {
