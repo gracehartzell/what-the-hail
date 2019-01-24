@@ -14,10 +14,10 @@ The _ultimate_ user's choice weather app! This app was designed with style and c
 
 ## How it was made
 
--We used [PostgreSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), and [Knex](https://knexjs.org/) to put together the database, server, and routing, ie. backend. 
--For security we used [bcrypt](https://www.npmjs.com/package/bcrypt) and [Crypto](https://nodejs.org/api/crypto.html).
--For the frontend, we used [Vue.js](https://vuejs.org/) to render our page.
--For our mobile implementation we chose to use [Cordova](https://cordova.apache.org/) to allow us to write for both Android and iOS in Vue (rather than React with React Native). 
+- We used [PostgreSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), and [Knex](https://knexjs.org/) to put together the database, server, and routing, ie. backend. 
+- For security we used [bcrypt](https://www.npmjs.com/package/bcrypt) and [Crypto](https://nodejs.org/api/crypto.html).
+- For the frontend, we used [Vue.js](https://vuejs.org/) to render our page.
+- For our mobile implementation we chose to use [Cordova](https://cordova.apache.org/) to allow us to write for both Android and iOS in Vue (rather than React with React Native). 
 
 ## Authors
 
