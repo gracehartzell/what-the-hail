@@ -21,9 +21,9 @@ The _ultimate_ user's choice weather app! This app was designed with style and c
 ## Authors
 
 The wonderful and talented engineers behind this application were:
-- Grace Hartzell, lead designer and linter expert
-- Mitalli Mital, frontend lead and Vue enthusiast
-- Bryan Anderson, backend guy and helper monkey
+- [Grace Hartzell](https://github.com/gracehartzell), lead designer and linter expert
+- [Mitalli Mital](https://github.com/mits254), frontend lead and Vue enthusiast
+- [Bryan Anderson](https://github.com/Genoval13), backend guy and helper monkey
 
 ## Acknowledgements
 
