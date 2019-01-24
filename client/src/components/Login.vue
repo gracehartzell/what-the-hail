@@ -4,7 +4,6 @@
     <form>
       <label for="username" >Username</label>
         <input id="username" type="username" v-model="username" required autofocus>
-
       <label for="password" >Password</label>
         <input id="password" type="password" v-model="password" required>
       <button type="submit" @click="handleSubmit">Login</button>
@@ -27,7 +26,6 @@ export default {
         username: this.username,
         password: this.password
       };
-
       const options = {
         method: "post",
         headers: {
@@ -36,9 +34,7 @@ export default {
         },
         body: JSON.stringify(user)
       };
-
       const request = new Request("http://localhost:3000/signin", options);
-
       fetch(request);
       alert("You are signin");
     }
@@ -59,16 +55,13 @@ export default {
 #login input {
   display: flex;
 }
-
 #login label {
   margin-top: 17px;
 }
-
 #login input {
   line-height: 1.2rem;
 }
-
-button {
+#login button {
 margin: 15px 0;
 float: right;
 }
