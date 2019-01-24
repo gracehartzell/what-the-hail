@@ -6,8 +6,8 @@
 
     <div id="weather-display">
       <h2>{{this.temp}} {{this.unit}}<br><sub>{{this.tempC}} {{this.unitC}}</sub></h2>
-      <h4>It's nice and {{ this.text }} outside</h4>
-      <h4>Forecast calls for {{this.precip}} rain today</h4>
+      <h4>{{ this.text }}</h4>
+      <h4>{{this.precip}}</h4>
     </div>
   </div>
 </template>
@@ -21,8 +21,11 @@ export default {
       state: "",
       temp: "",
       unit: "",
+      tempC: "",
+      unitC: "",
       background: "",
-      text: ""
+      text: "",
+      precip: ""
     };
   },
   methods: {
@@ -61,12 +64,19 @@ export default {
             })
             .then(res => {
               console.log(res[0]);
-              this.temp = res[0].Temperature.Imperial.Value + " °";
-              this.unit = res[0].Temperature.Imperial.Unit;
-              this.tempC = res[0].Temperature.Metric.Value + " °";
-              this.unitC = res[0].Temperature.Metric.Unit;
-              this.text = res[0].WeatherText.toLowerCase();
-              this.precip = (res[0].HasPrecipitation === true) ? '' : 'no'
+              this.temp =res[0].Temperature.Imperial.Value;
+              this.unit = " °" + res[0].Temperature.Imperial.Unit;
+              this.tempC =res[0].Temperature.Metric.Value;
+              this.unitC = " °" + res[0].Temperature.Metric.Unit;
+              this.text =
+                "It's nice and " +
+                res[0].WeatherText.toLowerCase() +
+                " outside";
+              this.precip =
+                "Forecast calls for " +
+                (res[0].HasPrecipitation === true ? "" : "no") +
+                " rain today";
+              this.background = res[0].WeatherIcon;
             });
         });
     }
@@ -85,7 +95,6 @@ export default {
 }
 
 #weather-display {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;

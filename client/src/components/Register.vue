@@ -1,6 +1,6 @@
 <template>
 	<div class="register">
-		<h4>Register</h4>
+		<h6>Register</h6>
 			<form>
 				<label for="username" >Username</label>
 					<input id="username" type="username" v-model="username" required>
@@ -48,10 +48,13 @@ export default {
 
 <style>
 .register {
-  padding-top: 30px;
   text-align: left;
+  font-size: 14px;
 }
 .register label:nth-child(3) {
   padding-right: 5px;
+}
+.register h6 {
+  font-weight: bold;
 }
 </style>

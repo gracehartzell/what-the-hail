@@ -4,17 +4,10 @@
       <img src="../assets/hailLOGO.svg.png">
       <h1>What the Hail?</h1>
     </div>
-    <div class="buttons">
-      <button>Login</button>
-      <button>Register</button>
-    </div>
   </div>
 </template>
 
 <script>
-import Login from "@/components/Login";
-import Register from "@/components/Register";
-
 export default {
   name: "Navbar",
   data: {
@@ -39,11 +32,5 @@ export default {
 .logo {
   display: flex;
   align-items: flex-end;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 </style>

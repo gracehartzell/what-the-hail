@@ -1,10 +1,9 @@
 <template>
   <div class="login">
-    <h4>Login</h4>
+    <h6>Login</h6>
     <form>
       <label for="username" >Username</label>
         <input id="username" type="username" v-model="username" required autofocus>
-
       <label for="password" >Password</label>
         <input id="password" type="password" v-model="password" required>
       <button type="submit" @click="handleSubmit">Login</button>
@@ -50,8 +49,12 @@ export default {
 .login {
   padding-top: 30px;
   text-align: left;
+  font-size: 14px;
 }
 .login label:nth-child(3) {
   padding-right: 5px;
+}
+.login h6 {
+  font-weight: bold;
 }
 </style>
