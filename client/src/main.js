@@ -6,6 +6,8 @@ import router from "./router";
 
 import Navbar from "@/components/Navbar";
 import Login from "@/components/Login";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbvue/build/css/mdb.css";
 
 Vue.component("Navbar", Navbar);
 Vue.component("Login", Login);
