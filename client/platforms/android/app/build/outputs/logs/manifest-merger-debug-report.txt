@@ -9,7 +9,7 @@ INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/a
 INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
 INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
 	package
-		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:102-134
+		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:102-135
 		INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,7 +19,7 @@ INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/a
 	android:hardwareAccelerated
 		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:135-193
+		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:136-194
 	android:versionCode
 		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:2:46-73
 		INJECTED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml
@@ -52,7 +52,7 @@ ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/andr
 		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#com.f1lt3r.whatthehail.MainActivity
+activity#io.cordova.hellocordova.MainActivity
 ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /Users/gracehartzell/galvanize/q4/what-the-hail/client/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
