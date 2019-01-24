@@ -89,9 +89,11 @@ export default {
   display: flex;
   align-items: baseline;
   vertical-align: top;
+  margin-left: 15px;
 }
-.location-search input {
+input {
   width: 20%;
+  background-color: rgba(255, 255, 255, 0.438)
 }
 
 #weather-display {
