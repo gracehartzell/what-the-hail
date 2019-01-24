@@ -2,25 +2,28 @@
   <div id="app">
     <Navbar />
     <Weather />
-    <Login />
-    <Register />
+    <AuthPage />
+
+    <!-- <Login /> -->
+    <!-- <Register /> -->
   </div> 
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-import Login from "@/components/Login";
-import Register from "@/components/Register";
 import Weather from "@/components/Weather";
-
+// import Login from "@/components/Login";
+// import Register from "@/components/Register";
+import AuthPage from "@/components/AuthPage"
 
 export default {
   name: "Home",
   components: {
     Navbar,
-    Login,
-    Register,
-    Weather
+    Weather,
+    // Login,
+    // Register,
+    AuthPage
   }
 };
 </script>

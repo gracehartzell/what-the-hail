@@ -1,17 +1,17 @@
-<template>
-  <div>
-    <b-progress class="fixed-top" v-show="asyncState" :value="100" variant="primary" striped animated></b-progress>
-    <b-container v-if="!signedIn">
-      <b-row align-v="center" style="min-height: 100vh;">
-          <b-col>
-            <auth-page @sign-in="signedIn = true" @async-start="asyncState = true" @async-end="asyncState = false"/>
-          </b-col>
-      </b-row>
-    </b-container>
-    <main-page v-else @sign-out="signedIn = false" @async-start="asyncState = true" @async-end="asyncState = false"/>
-  </div>
+<template id="modal-template">
+    <transition name="modal">
+        <div class="modal-mask" v-show="show">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3>Login</h3>
+                </div>
+                <div class="modal-body">
+                  <Login />
+                </div>
+            </div>
+        </div>
+    </transition>
 </template>
-
 
 <script>
 import Login from "@/components/Login";
@@ -30,3 +30,14 @@ export default {
   }
 };
 </script>
+
+<style>
+#auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35%;
+  flex-wrap: wrap;
+}
+</style>
+
