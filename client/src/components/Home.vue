@@ -13,6 +13,7 @@ import Login from "@/components/Login";
 import Register from "@/components/Register";
 import Weather from "@/components/Weather";
 
+
 export default {
   name: "Home",
   components: {
@@ -23,5 +24,3 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->

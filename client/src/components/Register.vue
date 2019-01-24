@@ -68,7 +68,7 @@ export default {
   line-height: 1.2rem;
 }
 
-button {
+#register button {
 margin: 15px 0;
 float: right;
 }

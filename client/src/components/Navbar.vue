@@ -12,17 +12,13 @@ export default {
 </script>
 
 <style>
-#header {
-  border: 1px solid red;
-  /* width: 100%; */
+#header, 
+#header img{
   height: 75px;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-h1 {
-  font-weight: normal;
-}
-img {
-  height: 75px;
-}
+
 </style>

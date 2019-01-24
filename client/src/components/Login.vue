@@ -27,6 +27,7 @@ export default {
         username: this.username,
         password: this.password
       };
+
       const options = {
         method: "post",
         headers: {
@@ -35,7 +36,9 @@ export default {
         },
         body: JSON.stringify(user)
       };
+
       const request = new Request("http://localhost:3000/signin", options);
+
       fetch(request);
       alert("You are signin");
     }
@@ -56,12 +59,15 @@ export default {
 #login input {
   display: flex;
 }
+
 #login label {
   margin-top: 17px;
 }
+
 #login input {
   line-height: 1.2rem;
 }
+
 #login button {
 margin: 15px 0;
 float: right;
