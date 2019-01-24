@@ -1,5 +1,5 @@
 <template>
-	<div id="register">
+	<div class="register">
 		<h4>Register</h4>
 			<form>
 				<label for="username" >Username</label>
@@ -47,29 +47,11 @@ export default {
 </script>
 
 <style>
-#register {
-  border: 1px solid salmon;
-  margin: auto;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.register {
+  padding-top: 30px;
+  text-align: left;
 }
-#register label,
-#register input {
-  display: flex;
-}
-
-#register label {
-  margin-top: 17px;
-}
-
-#register input {
-  line-height: 1.2rem;
-}
-
-#register button {
-margin: 15px 0;
-float: right;
+.register label:nth-child(3) {
+  padding-right: 5px;
 }
 </style>

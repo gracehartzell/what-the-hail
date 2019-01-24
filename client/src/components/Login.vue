@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div class="login">
     <h4>Login</h4>
     <form>
       <label for="username" >Username</label>
@@ -47,29 +47,11 @@ export default {
 </script>
 
 <style scoped>
-#login {
-  border: 1px solid salmon;
-  margin: auto;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.login {
+  padding-top: 30px;
+  text-align: left;
 }
-#login label,
-#login input {
-  display: flex;
-}
-
-#login label {
-  margin-top: 17px;
-}
-
-#login input {
-  line-height: 1.2rem;
-}
-
-#login button {
-margin: 15px 0;
-float: right;
+.login label:nth-child(3) {
+  padding-right: 5px;
 }
 </style>
