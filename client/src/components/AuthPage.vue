@@ -24,6 +24,7 @@ export default {
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 70%;
 }
 </style>
 
