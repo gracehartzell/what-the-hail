@@ -2,6 +2,9 @@
 
 The _ultimate_ user's choice weather app! This app was designed with style and customization in mind for the average weather-watching consumer, particularly those on Android devices. However, given only two days to work on this product, there are still some features left to be implemented. Please be patient while we work to finish up the _ultimate_ user's choice weather app!
 
+Mobile view (once signed in):
+<img src="./public/images/WhattheHail.png">
+
 ## How To Use:
 
 - Fork and Clone the repo
